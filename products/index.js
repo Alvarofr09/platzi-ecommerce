@@ -6,6 +6,7 @@ const url = new URL(document.location.href);
 const categoryId = url.searchParams.get("categoryId");
 const limit = 10;
 const lista = document.querySelector(".lista-categorias");
+const buttonProfile = document.querySelector(".boton-profile");
 
 console.log(categoryId);
 
@@ -26,18 +27,9 @@ async function showData(limit, category) {
 
 			imagen.src = product.images[1];
 
-			// Acortar el título a 10 palabras máximo
-			const titleWords = product.title.split(" ");
-			const shortenedTitle = titleWords.slice(0, 1).join(" ");
-			name.textContent = shortenedTitle + (titleWords.length > 2 ? "..." : "");
-
+			name.textContent = product.title;
 			price.textContent = product.price + "€";
-
-			// Acortar la descripción a 10 palabras máximo
-			const descriptionWords = product.description.split(" ");
-			const shortenedDescription = descriptionWords.slice(0, 8).join(" ");
-			description.textContent =
-				shortenedDescription + (descriptionWords.length > 8 ? "..." : "");
+			description.textContent = product.description;
 
 			container.appendChild(templateCard);
 		}
@@ -46,6 +38,7 @@ async function showData(limit, category) {
 	}
 }
 
-showProfile();
+buttonProfile.addEventListener("click", showProfile);
+
 showListCategories(lista);
 showData(limit, categoryId);
