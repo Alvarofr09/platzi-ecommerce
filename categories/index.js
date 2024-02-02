@@ -3,6 +3,7 @@ const urlCategories = "https://api.escuelajs.co/api/v1/categories";
 const template = document.querySelector(".card--template");
 const container = document.querySelector(".container");
 const lista = document.querySelector(".lista-categorias");
+const buttonProfile = document.querySelector(".boton-profile");
 
 async function showData() {
 	const categories = await getData(urlCategories);
@@ -30,6 +31,7 @@ async function showData() {
 	}
 }
 
-// showProfile();
+buttonProfile.addEventListener("click", showProfile);
+
 showListCategories(lista);
 showData();
