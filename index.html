@@ -1,13 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<nav class="nav">
+			<img src="" alt="Logo" />
+		</nav>
+		<main class="index_container">
+			<section class="container">
+				<div class="heading">Iniciar Sesión</div>
+				<form class="form login" action="">
+					<input
+						placeholder="E-mail"
+						id="correoInicio"
+						name="email"
+						type="email"
+						class="input"
+						required=""
+					/>
+					<input
+						placeholder="Password"
+						id="contrasenaInicio"
+						name="password"
+						type="password"
+						class="input"
+						required=""
+					/>
+					<!-- <span class="forgot-password"><a href="#">Forgot Password ?</a></span> -->
+					<input value="Iniciar sesión" type="submit" class="login-button" />
+				</form>
+
+				<span class="agreement"
+					><a href="./privacidad.html">Politicas de privacidad</a></span
+				>
+			</section>
+
+			<section class="container">
+				<div class="heading">Registrate</div>
+				<form class="form register" action="">
+					<input
+						placeholder="Nombre"
+						type="text"
+						name="nombre"
+						id="nombreRegistro"
+						class="input nombreRegistro"
+						required=""
+					/>
+					<input
+						placeholder="E-mail"
+						id="correo"
+						name="email"
+						type="email"
+						class="input"
+						required=""
+					/>
+					<input
+						placeholder="Password"
+						id="contrasenaRegistro"
+						name="password"
+						type="password"
+						class="input"
+						required=""
+					/>
+					<!-- <span class="forgot-password"><a href="#">Forgot Password ?</a></span> -->
+					<input
+						value="Crear tu cuenta ahora"
+						type="submit"
+						class="signin-button"
+					/>
+				</form>
+
+				<span class="agreement"
+					><a href="./privacidad.html">Politicas de privacidad</a></span
+				>
+			</section>
+		</main>
+		<script type="module" src="index.js"></script>
+	</body>
 </html>
