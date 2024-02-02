@@ -28,7 +28,7 @@ export async function showListCategories(lista) {
 }
 
 export async function showProfile() {
-	document.location.href = "../profile/index.hmtl";
+	// document.location.href = "../profile/index.hmtl";
 
 	const user = await getData(urlUser);
 
