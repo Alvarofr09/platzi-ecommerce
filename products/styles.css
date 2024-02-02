@@ -61,11 +61,24 @@ svg {
 	font-weight: 900;
 	font-size: 1.2em;
 	line-height: 1.5;
+
+	/* Acortar el titulo a un máximo de 1 linea*/
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .text-body {
 	font-size: 0.9em;
 	padding-bottom: 10px;
+	line-height: 1.2em;
+
+	/* Acortar la descripcion a un máximo de 3 lineas */
+
+	max-height: calc(1.2em * 3);
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 /*Button*/
