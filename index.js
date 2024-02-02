@@ -27,7 +27,7 @@ async function handleLoginSubmit(e) {
 
 		console.log(response.status);
 		if (response.status >= 200 && response.status <= 300) {
-			document.location.href = "../categories/index.html";
+			document.location.href = "/categories/index.html";
 		} else {
 			this.reset();
 
